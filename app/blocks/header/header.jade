@@ -1,0 +1,14 @@
+include ../nav/nav
+include ../container/container
+include ../yellow-btn/yellow-btn
+
+mixin header()
+	+b('header').header&attributes(attributes)
+		+container()
+			+nav()
+			+e('h1').title
+				+e('img').logo(src='assets/images/logo.png')
+				| Bar Veranda
+			+e('p').subtitle
+				| Поднимись за облака без шума мотора, сидя в уютном месте
+			+yellow-btn('Наше меню')

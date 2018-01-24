@@ -1,0 +1,9 @@
+mixin nav()
+	+b('nav').nav&attributes(attributes)
+		+e('ul').col
+			-const nav = ['О нас', 'Наше меню', 'Фотогалерея', 'Контакты'];
+				each item in nav
+					+e('li').item
+						a(href='#') #{item}
+		+e.col
+			+e('span').phone 8 (800) 555 33 26
