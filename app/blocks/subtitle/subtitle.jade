@@ -1,3 +1,3 @@
-mixin subtitle()
-	+b.subtitle&attributes(attributes)
-		block
+mixin subtitle(arg)
+	+b('p').subtitle&attributes(attributes)
+		| #{arg}

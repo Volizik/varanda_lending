@@ -10,10 +10,25 @@
 	&__item
 		margin-right 39px
 		a
+			position relative
+			display block
+			overflow hidden
 			font-family semi
 			font-size 22px
 			text-decoration none
 			color c_black
+			&:hover
+				&:after
+					width 100%
+			&:after
+				position absolute
+				left 0
+				overflow hidden
+				width 0
+				white-space nowrap
+				content attr(data-anim)
+				color #ffb505
+				transition width 1s
 	&__phone
 		margin-x(auto)
 		font-family xbold

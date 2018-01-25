@@ -1,0 +1,18 @@
+include ../container/container
+include ../title/title
+include ../subtitle/subtitle
+include ../window/window
+
+mixin gallery(args)
+	+b('section').gallery
+		+window()
+			+container()
+				+title('Фотогалерея')
+				+subtitle('Lorem ipsum dolor sit amet, consectetur adipisicing eonsectetur adipisicing eonsectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ')
+				+e.body
+					each arg in args
+						+e.item
+							img(src='#{arg.src}' alt='#{arg.name}')
+					+e('a').btn(href='#')
+						img(src='assets/images/photo-camera.png')
+						span Все фотографии (23)

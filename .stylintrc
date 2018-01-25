@@ -66,6 +66,7 @@
 		"flex-order",
 		"flex-pack",
 		"flex-align",
+		"grid-gap",
 
 		"box-sizing",
 		"width",

@@ -1,0 +1,28 @@
+include ../container/container
+include ../title/title
+include ../subtitle/subtitle
+include ../yellow-btn/yellow-btn
+
+mixin menu()
+	+b('section').menu
+		+container()
+			+title('Наше меню')
+			+subtitle('Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ')
+			+e.wrap
+				+e.img
+					+e('a').link(href='#')
+						img(src='assets/images/menu.png')
+						span скачать банкетное меню
+				+e.body
+					+e.list
+						+e('ul').col
+							+e('li').col-title Холодные закуски
+							+e('li').col-item Карпаччо из телятины с сыром пармезан и миксом салатов
+							+e('li').col-item Карпаччо из телятины с сыром пармезан и миксом салатов
+							+e('li').col-item Карпаччо из телятины с сыром пармезан и миксом салатов
+						+e('ul').col
+							+e('li').col-title Горячие закуски
+							+e('li').col-item Карпаччо из телятины с сыром пармезан и миксом салатов
+							+e('li').col-item Карпаччо из телятины с сыром пармезан и миксом салатов
+							+e('li').col-item Карпаччо из телятины с сыром пармезан и миксом салатов
+					+yellow-btn('Развернуть весь список')
