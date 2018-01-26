@@ -22,5 +22,11 @@ $(() => {
 			$('ul.nav__col').slideToggle().css('display', 'flex');
 		}
 	});
+	$(document).on('click', '.header .yellow-btn', function () {
+		event.preventDefault();
+		$('html, body').animate({
+			scrollTop: $('section[id="menu"]').offset().top
+		}, 1000);
+	});
 
 });
