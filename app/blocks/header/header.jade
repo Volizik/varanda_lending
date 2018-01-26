@@ -2,10 +2,10 @@ include ../nav/nav
 include ../container/container
 include ../yellow-btn/yellow-btn
 
-mixin header()
+mixin header(data)
 	+b('header').header&attributes(attributes)
 		+container()
-			+nav()
+			+nav(data)
 			+e('h1').title
 				+e('img').logo(src='assets/images/logo.png')
 				| Bar Veranda

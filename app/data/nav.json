@@ -1,0 +1,6 @@
+[
+  {"name": "О нас", "id": "about"},
+  {"name": "Наше меню", "id": "menu"},
+  {"name": "Фотогалерея", "id": "gallery"},
+  {"name": "Контакты", "id": "contacts"}
+]

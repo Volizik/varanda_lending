@@ -8,4 +8,5 @@ html(lang='ru')
 	include ../head/head
 	+page
 		block content
+		+scripts([async, defer, src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCWPJeqSwiSvkOsLbXQsHCb7ikqq7Zz16M&callback=initMap"])
 		+scripts(['app.min.js'])

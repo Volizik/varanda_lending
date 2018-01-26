@@ -1,10 +1,14 @@
 .about
 	margin-top 415px
+	+below(600px)
+		margin-top 250px
 	&__body
 		display flex
 	&__image
 		position relative
 		flex-basis 45%
+		+below(992px)
+			display none
 		img
 			position absolute
 			top -127px
@@ -12,21 +16,41 @@
 	&__text
 		padding-top 45px
 		flex-basis 60%
+		+below(992px)
+			flex-basis 100%
 		p
 			font-family reg
 			font-size 22px
 			line-height 32px
+			+below(600px)
+				font-size 14px
+				line-height 18px
 		a
 			margin-top 45px
 			padding-left 8px
 			display flex
 			text-decoration none
 			cursor pointer
+			+below(992px)
+				padding 0
+				justify-content center
+			+below(600px)
+				align-items center
 			img
 				margin-right 43px
+				width 86px
+				height 65px
+				object-fit contain
+				+below(600px)
+					width 66px
+					height 45px
+					margin-right 10px
 			span
 				margin-top 23px
 				font-family bold
 				font-size 22px
 				text-decoration underline
 				color c_brown
+				+below(600px)
+					margin-top 0
+					font-size 18px

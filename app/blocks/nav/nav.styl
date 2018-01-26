@@ -4,33 +4,93 @@
 	padding-left 3px
 	display flex
 	align-items center
+	+below(1200px)
+		justify-content space-between
+	+below(992px)
+		ul.nav__col
+			position fixed
+			z-index 9
+			top 0
+			right 0
+			left 0
+			bottom 0
+			display none
+			flex-direction column
+			justify-content center
+			align-items center
+			background-color rgba(255, 255, 255, .8)
+	&__btn
+		position fixed
+		z-index 10
+		display none
+		size(50px)
+		background-color #ffb505
+		border none
+		border-radius 50%
+		+below(992px)
+			display block
+		span, &:before, &:after
+			position absolute
+			top 50%
+			left 50%
+			margin-y(1px)
+			width 30px
+			height 3px
+			content ''
+			background-color c_black
+			transform translate(-50%, -50%)
+			transition .3s
+		&:before
+			top 36%
+		&:after
+			top 65%
+		&--close
+			span
+				display none
+			&:before
+				top 50%
+				transform translate(-50%, -50%) rotate(45deg)
+			&:after
+				top 50%
+				transform translate(-50%, -50%) rotate(-45deg)
 	&__col
 		display flex
 		width 50%
+		+below(1200px)
+			width auto
+		+below(992px)
+			margin-left auto
 	&__item
 		margin-right 39px
+		+below(992px)
+			margin-right 0
+			margin-bottom 20px
 		a
 			position relative
 			display block
 			overflow hidden
 			font-family semi
 			font-size 22px
+			white-space nowrap
 			text-decoration none
 			color c_black
 			&:hover
 				&:after
-					width 100%
+					height 100%
 			&:after
 				position absolute
+				top 0
 				left 0
 				overflow hidden
-				width 0
+				height 0
 				white-space nowrap
 				content attr(data-anim)
 				color #ffb505
-				transition width 1s
+				transition 1s
 	&__phone
 		margin-x(auto)
 		font-family xbold
 		font-size 25px
+		+below(600px)
+			font-size 20px
 

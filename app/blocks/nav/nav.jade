@@ -1,9 +1,10 @@
-mixin nav()
+mixin nav(data)
 	+b('nav').nav&attributes(attributes)
+		+e('button').btn
+			span
 		+e('ul').col
-			-const nav = ['О нас', 'Наше меню', 'Фотогалерея', 'Контакты'];
-				each item in nav
-					+e('li').item
-						a(href='#' data-anim='#{item}') #{item}
+			each item in data
+				+e('li').item
+					a(href='#{item.id}' data-anim='#{item.name}') #{item.name}
 		+e.col
 			+e('span').phone 8 (800) 555 33 26

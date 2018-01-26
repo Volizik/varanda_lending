@@ -1,3 +1,18 @@
+include ../container/container
+include ../window/window
+include ../title/title
+include ../subtitle/subtitle
+
 mixin contacts()
-	+b.contacts&attributes(attributes)
-		block
+	+b('section').contacts#contacts
+		+e('img').round(src='assets/images/round2.png')
+		+window()
+			+container()
+				+title('Контакты')
+				+subtitle('Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ')
+				+e('ul').list
+					+e('li').item 8 800 547 89 26
+					+e('li').item адрес заведения
+					+e('li').item 8 800 547 89 26
+		+e.map(id='map')
+			iframe(width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJWQUt0lpGQ0IRM9RE0uBrC6k&key=AIzaSyA97UgMODLic2YohRh4MKoU8pBJjzc2mvo" allowfullscreen)

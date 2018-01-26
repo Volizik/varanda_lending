@@ -1,13 +1,21 @@
 .menu
-	margin-top 123px
+	margin-top 73px
 	display block
+	+below(992px)
+		overflow-x hidden
 	.title
 		margin-bottom 34px
 	&__wrap
 		display flex
+		+below(768px)
+			flex-direction column
 	&__img
 		width 32.3%
 		flex-shrink 0
+		+below(768px)
+			margin auto
+			margin-top -40px
+			min-width 240px
 	&__link
 		position relative
 		margin-top 117px
@@ -48,9 +56,16 @@
 	&__body
 		margin-top 65px
 		width 100%
+		+below(600px)
+			display flex
+			flex-direction column
+			align-items center
 	&__list
 		display flex
 		justify-content space-between
+		+below(600px)
+			flex-direction column
+			align-items center
 	&__col
 		width 100%
 		max-width 350px
@@ -59,11 +74,16 @@
 		font-family bold
 		font-size 25px
 		color c_brown
+		+below(600px)
+			font-size 18px
 	&__col-item
 		margin-bottom 23px
 		font-family reg
 		font-size 18px
 		line-height 21px
+		+below(600px)
+			margin-bottom 15px
+			font-size 16px
 	.yellow-btn
 		margin-top 30px
 @keyframes pulse

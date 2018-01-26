@@ -1,9 +1,23 @@
 .gallery
-	margin-top 133px
+	position relative
 	margin-bottom 30px
+	padding-top 173px
 	display block
+	overflow-x hidden
+	+below(600px)
+		margin-bottom 0
+		padding-top 60px
 	.window
+		margin-top -50px
+		margin-bottom 50px
 		height 640px
+		+below(992px)
+			padding-bottom 20px
+			height auto
+		+below(600px)
+			padding 0
+			background-color transparent
+			box-shadow none
 	.title
 		margin-top 40px
 	.subtitle
@@ -15,10 +29,25 @@
 		grid-template-columns 5fr 2fr 3fr
 		grid-template-rows 210px 210px
 		grid-gap 2px
+		+below(992px)
+			grid-template-columns 1fr 1fr
+			grid-template-rows 210px 155px 155px
+		+below(600px)
+			grid-template-columns 1fr
+			grid-template-rows 150px 150px 150px
 	&__item
 		overflow hidden
+		+below(600px)
+			display none
+			&:nth-of-type(1), &:nth-of-type(2), &:nth-of-type(3)
+				display block
 		&:first-of-type
 			grid-row 1/3
+			+below(992px)
+				grid-row 1
+				grid-column 1/3
+			+below(600px)
+				grid-column 1
 		img
 			display block
 			size(100%)
@@ -42,3 +71,9 @@
 			margin-right 5px
 		span
 			white-space nowrap
+	&__round
+		position absolute
+		top 0
+		right -150px
+		+below(600px)
+			display none

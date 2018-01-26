@@ -3,12 +3,14 @@ include ../blocks/header/header
 include ../blocks/about/about
 include ../blocks/gallery/gallery
 include ../blocks/menu/menu
+include ../blocks/contacts/contacts
 
 block head
 	- var pageTitle = 'Veranda';
 
 block content
-	+header()
+	+header(getData('nav'))
 	+about()
 	+gallery(getData('gallery'))
 	+menu()
+	+contacts()

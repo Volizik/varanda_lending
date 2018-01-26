@@ -4,7 +4,8 @@ include ../subtitle/subtitle
 include ../window/window
 
 mixin gallery(args)
-	+b('section').gallery
+	+b('section').gallery#gallery
+		+e('img').round(src='assets/images/round1.png')
 		+window()
 			+container()
 				+title('Фотогалерея')
